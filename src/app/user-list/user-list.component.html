@@ -1,0 +1,7 @@
+<label for="user-search">Search for a user</label>
+<input id="user-search" #search placeholder="Ex: Nav">
+<button (click)="searchHousingLocations(search.value)">Search</button>
+<article *ngFor="let user of results">
+    <p>{{user.firstname}}</p>
+    <button (click)="selectUser(user)">View</button>
+</article>
